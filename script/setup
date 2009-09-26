@@ -1,0 +1,16 @@
+#!/usr/bin/env ruby
+
+require "#{File.dirname(__FILE__)}/../config/boot"
+require 'fileutils'
+#####################################
+# This scipt is run to setup the storage
+# pass --init arguement to cleanup storage and start from scratch
+#####################################
+path   = STORAGE_CONFIG['path']
+
+if ARGV[0] == '--init'
+  FileUtils.rm_rf(path) 
+end
+
+# Do the setup
+FileUtils.mkdir_p(path)
