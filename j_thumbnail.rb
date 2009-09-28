@@ -2,4 +2,4 @@
 require "#{File.dirname(__FILE__)}/config/boot"
 module JThumbnail
 end
-require 'j_thumbnail/storage'
+require "#{File.dirname(__FILE__)}/j_thumbnail/storage"
