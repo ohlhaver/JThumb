@@ -14,3 +14,4 @@ end
 
 # Do the setup
 FileUtils.mkdir_p(path)
+FileUtils.mkdir_p(File.join(path,'thumb'))

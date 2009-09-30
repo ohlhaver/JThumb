@@ -5,7 +5,7 @@ require 'eventmachine'
 require 'evma_httpserver'
 require 'uri'
 require 'yaml'
-require "#{File.dirname(__FILE__)}/../j_thumbnail"
+require "#{File.dirname(__FILE__)}/../j_thumb"
 
 ################################################
 # Sample Client
@@ -53,9 +53,9 @@ class ThumbnailManager < EventMachine::Connection
       if Data.valid?(params)
         path = nil
         if params[:action] == 'add'
-          path = JThumbnail::Storage.add(params[:id],params[:data])
+          path = JThumb::Storage.add(params[:id],params[:data])
         elsif params[:action] == 'delete'
-          path = JThumbnail::Storage.delete(params[:id])
+          path = JThumb::Storage.delete(params[:id])
         end
         if path
           resp.status  = 200

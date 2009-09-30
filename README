@@ -1,0 +1,4 @@
+Dependecies
+  * ruby
+  * rubygem
+  * gems : eventmachine, eventmachine_httpserver, daemons
