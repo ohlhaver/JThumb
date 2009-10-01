@@ -1,4 +1,6 @@
 #!/usr/bin/env ruby
 require 'yaml'
 
-STORAGE_CONFIG = YAML.load_file(File.join(File.dirname(__FILE__), 'storage.yml'))
+APP_ROOT = "#{File.dirname(__FILE__)}/.."
+STORAGE_CONFIG = YAML.load_file(File.join(APP_ROOT, 'config/storage.yml'))
+

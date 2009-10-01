@@ -1,4 +1,5 @@
 Dependecies
   * ruby
   * rubygem
-  * gems : eventmachine, eventmachine_httpserver, daemons
+  * gems : eventmachine, eventmachine_httpserver, daemons (,passenger)
+  * nginx
