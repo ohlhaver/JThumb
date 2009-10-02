@@ -1,17 +1,9 @@
 #!/usr/bin/env ruby
 
-require "#{File.dirname(__FILE__)}/../config/boot"
-require 'fileutils'
+require "#{File.dirname(__FILE__)}/../j_thumb"
 #####################################
 # This scipt is run to setup the storage
 # pass --init arguement to cleanup storage and start from scratch
 #####################################
-path   = STORAGE_CONFIG['path']
-
-if ARGV[0] == '--init'
-  FileUtils.rm_rf(path) 
-end
-
-# Do the setup
-FileUtils.mkdir_p(path)
-FileUtils.mkdir_p(File.join(path,'thumb'))
+init = (ARGV[0] == '--init')
+JThumb::Storage.setup(init)
